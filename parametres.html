@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loop - Paramètres</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#136dec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101822",
+            },
+            fontFamily: {
+              "display": ["Spline Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10 p-4 pb-2 justify-between">
+<div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center justify-start -ml-2">
+<a href="Acceuil.html" class="material-symbols-outlined text-3xl hover:opacity-70 transition">chevron_left</a>
+</div>
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Paramètres</h1>
+<div class="flex size-12 shrink-0"></div>
+</header>
+<main class="flex flex-col gap-8 pb-10">
+<!-- Appearance Section -->
+<section>
+<h2 class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider px-4 pb-2 pt-4">Apparence</h2>
+<div class="bg-white dark:bg-[#1a232e] rounded-lg mx-4">
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-slate-200/60 dark:bg-[#101822] p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700/50 has-[:checked]:shadow-sm has-[:checked]:text-slate-900 dark:has-[:checked]:text-white text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">
+<span class="truncate">Clair</span>
+<input class="invisible w-0" name="theme-selector" type="radio" value="Clair"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700/50 has-[:checked]:shadow-sm has-[:checked]:text-slate-900 dark:has-[:checked]:text-white text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">
+<span class="truncate">Sombre</span>
+<input checked="" class="invisible w-0" name="theme-selector" type="radio" value="Sombre"/>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Notifications Section -->
+<section>
+<h2 class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider px-4 pb-2">Notifications</h2>
+<div class="bg-white dark:bg-[#1a232e] rounded-lg mx-4">
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-red-500 shrink-0 size-8">
+<span class="material-symbols-outlined text-lg">notifications</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Activer les notifications</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] items-center p-0.5 rounded-full 
+    bg-slate-300 dark:bg-[#2e3947] cursor-pointer transition-all duration-200 peer">
+
+    <input type="checkbox" class="peer absolute inset-0 opacity-0 cursor-pointer" />
+
+    <div class="h-[27px] w-[27px] bg-white rounded-full transition-all duration-200
+        peer-checked:translate-x-[20px]"></div>
+
+</label>
+
+<style>
+    /* hack pour changer la couleur du fond car Tailwind n'applique pas peer-checked:bg-xxx sur un label parent */
+    label:has(input:checked) {
+        background-color: #136dec !important; /* ta couleur primary */
+    }
+    
+</style>
+
+</div>
+</div>
+</div>
+</section>
+<!-- Account Section -->
+<section>
+<h2 class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider px-4 pb-2">Compte</h2>
+<div class="bg-white dark:bg-[#1a232e] rounded-lg mx-4 divide-y divide-slate-200 dark:divide-slate-700/60">
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-blue-500 shrink-0 size-8">
+<span class="material-symbols-outlined text-lg">person</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Gérer le compte</p>
+</div>
+<div class="text-slate-400 dark:text-slate-500 flex size-6 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-gray-500 shrink-0 size-8">
+<span class="material-symbols-outlined text-lg">logout</span>
+</div>
+<p class="text-red-500 dark:text-red-500 text-base font-normal leading-normal flex-1 truncate">Déconnexion</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section>
+<h2 class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider px-4 pb-2">À Propos</h2>
+<div class="bg-white dark:bg-[#1a232e] rounded-lg mx-4 divide-y divide-slate-200 dark:divide-slate-700/60">
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-green-500 shrink-0 size-8">
+<span class="material-symbols-outlined text-lg">description</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Conditions d'utilisation</p>
+</div>
+<div class="text-slate-400 dark:text-slate-500 flex size-6 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-indigo-500 shrink-0 size-8">
+<span class="material-symbols-outlined text-lg">shield</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Politique de confidentialité</p>
+</div>
+<div class="text-slate-400 dark:text-slate-500 flex size-6 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</div>
+</div>
+</div>
+<p class="text-center text-sm text-slate-400 dark:text-slate-500 mt-6">Loop version 1.0.0</p>
+</section>
+</main>
+</div>
+</body></html>

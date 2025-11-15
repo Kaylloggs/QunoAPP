@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loop - Soirée de Samedi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col bg-background-dark">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 h-full w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9gXruiOdjtr2IAWLVCzlkPpYFcL1LPJ9ygNQRWuE5bNigP81fmb3UThaGN2zCXNIXEqD0J5183Pgv0NvXHYUzw987YnJ7dXfQs9hQ9szJGsZ2MzQp32Nz5OM6K9Lfk6Y0oLA93MD0uAUSr1gtkNErJhEhDkrOVKlIdX9IbFFX6_0Gohv4LLqZDduQXLipKx-2wfclUu0fA_u1h8TeJRrzEjcRTMvG4IV4nvB_88THEq_PZHXzS7imsaa3f68v_f-MD5avzRpVnjA');">
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-3xl"></div>
+</div>
+<div class="relative z-10 flex h-full flex-col p-4 pb-0">
+<!-- Top App Bar -->
+<header class="flex items-center justify-between py-2">
+<button class="flex h-12 w-12 items-center justify-center text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<div class="text-center">
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] text-white">Soirée de Samedi</h1>
+<p class="text-sm text-white/70">8 participants</p>
+</div>
+<button class="flex h-12 w-12 items-center justify-center text-white">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</header>
+<!-- Player Card -->
+<div class="mt-8 flex flex-col items-center gap-6 rounded-xl bg-white/10 p-6 backdrop-blur-md">
+<div class="aspect-square w-full max-w-xs rounded-lg bg-cover bg-center shadow-2xl" data-alt="Album art for the currently playing song" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXgYD7yuB8HiOJ5j8iVlbkwmlszttYXQoysF4SYaW52yroJj6aEk5vULX0W7DuyqQ8u9MX2c8P3uVl7HRKgKWwNK43RxZ2eJ7p3-Pd9crGeA6kyOsSVZEnCey6PxA7couAsL5tIIlRAcWJoWmAWgKxoeKw4SrTebWuazRP16XxJ3QLroqO0sFGc0t7A0r6qZkDOyJYD70_TG5WWoQL4FqpX5488wKEwvgrWyoQ05qJecQbXQGjgaxCyf1HcpKBsC1yX8tF6TfElwc');"></div>
+<div class="w-full text-center">
+<p class="text-xl font-bold leading-normal text-white">Starlight</p>
+<p class="text-base font-normal leading-normal text-white/70">Muse</p>
+</div>
+<div class="flex w-full flex-col gap-1">
+<div class="w-full rounded-full bg-white/20">
+<div class="h-1.5 rounded-full bg-white" style="width: 45%;"></div>
+</div>
+<div class="flex justify-between">
+<p class="text-xs font-normal text-white/70">1:45</p>
+<p class="text-xs font-normal text-white/70">4:03</p>
+</div>
+</div>
+<div class="flex w-full items-center justify-center gap-6 text-white">
+<button class="flex h-12 w-12 items-center justify-center text-white/70">
+<span class="material-symbols-outlined text-3xl">skip_previous</span>
+</button>
+<button class="flex h-16 w-16 items-center justify-center rounded-full bg-white text-background-dark shadow-lg">
+<span class="material-symbols-outlined text-4xl">pause</span>
+</button>
+<button class="flex h-12 w-12 items-center justify-center text-white/70">
+<span class="material-symbols-outlined text-3xl">skip_next</span>
+</button>
+</div>
+</div>
+<!-- Section Header -->
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-0 pb-2 pt-8">File d'attente</h3>
+</div>
+<!-- Playlist -->
+<div class="relative z-10 flex flex-1 flex-col gap-1 px-4 pb-24">
+<!-- List Item 1 -->
+<div class="flex items-center gap-4 rounded-lg bg-transparent px-0 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-md size-12" data-alt="Album art for Knights of Cydonia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAf6FE3LUMk__VNE310pqBXI0j0P_HQuf-mb-4-VwoeF-LfsGXiLaFywXwV_2xQMpY3MVe7a1JYdYSDLGl6B9jZXdgrLoKCuV6_OM0gUgkrmlc7pN7j8LsGGBTrmDHyx9vrGq4kHO_7ij2iCWDJk6ZonnTJpVvJSXIx9VgsWpetNOBmbXnf_UC0EWU7WE1PDw_esjrBM5WW0xZ--Z0hijvOKbP0FHpmyGCfc6dfYNDcslRIZJ-cTorweXs0ESdJGEJeYbIBZ98Hqw0");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">Knights of Cydonia</p>
+<p class="text-white/70 text-sm font-normal leading-normal line-clamp-2">Muse • Ajouté par Chloé</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="text-white/70 flex size-7 items-center justify-center cursor-grab">
+<span class="material-symbols-outlined">drag_indicator</span>
+</div>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center gap-4 rounded-lg bg-transparent px-0 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-md size-12" data-alt="Album art for Around the World" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxYlB_HhHobqhZh-Y9P3Bz8NInFT7njlSmK8dtHzuoxTsriPx0vj9XqES0FPznYCIz1mwZTfO3pPlxPFLn971jLxxPArfTsnBlzyfJ_YytYYdU_Yj1mmFuryn9SnvZoixfkcRUm4LPrZSW5XQ2I1frJYzG-JU5hk74QDdfHVXOoIA7KY9TARfWkAvqK2Ux-vGsElMfT3uDWMOiU1BQtwrKInwXC9lJeZu39hZJpIcixDIJhR1DdSsx2h5rT7izMrigFKHi4JE024k");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">Around the World</p>
+<p class="text-white/70 text-sm font-normal leading-normal line-clamp-2">Daft Punk • Ajouté par David</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="text-white/70 flex size-7 items-center justify-center cursor-grab">
+<span class="material-symbols-outlined">drag_indicator</span>
+</div>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center gap-4 rounded-lg bg-transparent px-0 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-md size-12" data-alt="Album art for Blinding Lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8gAdA0ciExYb_A4VJN9yPUHsw1izaptwU1dAHxOPTWNOgUioyyQfKAxKxnE7EPLNkA3CG0vjSxzh_CdL2o7zDgyw2lxTVaV_DzpiI7MxP_2jYSCQDd7WclPZjXj4rVas-l9zXbm26sXFWrZiQqr3iC9FUtZUzbrFDIpfj5uczdNWSD7n3T5BeuXU6D7MbnI_zDftAjFvUU2zj5rQkd9H0jI_MG6LnRcBMv47F6p9-x9yXS4gxXV76XVa10igSDWv8ctClqTgeeko");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">Blinding Lights</p>
+<p class="text-white/70 text-sm font-normal leading-normal line-clamp-2">The Weeknd • Ajouté par Alice</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="text-white/70 flex size-7 items-center justify-center cursor-grab">
+<span class="material-symbols-outlined">drag_indicator</span>
+</div>
+</div>
+</div>
+<!-- List Item 4 -->
+<div class="flex items-center gap-4 rounded-lg bg-transparent px-0 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-md size-12" data-alt="Album art for Mr. Brightside" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8rjplpckd0KLfnYGBfvGBqgCe9ei3pZoZJDN6dH6p2kazY5H4xaVgtHDG1BGayiOaNyAsqJv4OLYFoIvK2Yn6EqDR9NiT3NvdEySPEXdrBaz6DwyAjRrpSG8MMR9cJG3DvloQMU3kx_P2xjJlh8Npwy056NYkIQKnclZ_CVU-6n6niiiVtzwuv3Z7WuFmCweV3eMBj_gbzdj1df8a_RV0POpMVl6uTcPmrvWq4z3DMqFGYzsIuUGzn8UeFB29CACf_muQmLBbkvo");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">Mr. Brightside</p>
+<p class="text-white/70 text-sm font-normal leading-normal line-clamp-2">The Killers • Ajouté par Marc</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="text-white/70 flex size-7 items-center justify-center cursor-grab">
+<span class="material-symbols-outlined">drag_indicator</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<div class="fixed bottom-6 right-6 z-20">
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+</div>
+</body></html>

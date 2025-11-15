@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create New Room</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#136dec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101822",
+              "text-light-primary": "#1D1D1F",
+              "text-light-secondary": "#8A8A8E",
+              "text-dark-primary": "#FFFFFF",
+              "text-dark-secondary": "#9da8b9",
+              "border-light": "#E5E5E5",
+              "border-dark": "#3b4554",
+              "component-bg-light": "#FFFFFF",
+              "component-bg-dark": "#1c2027",
+              "toggle-bg-light": "#E9E9EA",
+              "toggle-bg-dark": "#282f39",
+            },
+            fontFamily: {
+              "display": ["Spline Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        --radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10 p-4 pb-2 justify-between">
+<div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center justify-start -ml-2">
+<a href="Acceuil.html" class="material-symbols-outlined text-3xl hover:opacity-70 transition">chevron_left</a>
+</div>
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Créer une Room</h1>
+<div class="flex size-12 shrink-0"></div>
+</header>
+<main class="flex flex-col gap-8 pb-10">
+<!-- Room Name TextField -->
+<div class="flex w-full flex-wrap items-end">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal pb-2">Nom de la Room</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-light-primary dark:text-text-dark-primary focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-component-bg-light dark:bg-component-bg-dark focus:border-primary h-14 placeholder:text-text-light-secondary dark:placeholder:text-text-dark-secondary p-[15px] text-base font-normal leading-normal" placeholder="ex. Soirée Chill, Fête de Noel" value=""/>
+</label>
+</div>
+<!-- Collaboration Mode Section -->
+<div>
+<h3 class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Choisir un Mode</h3>
+<!-- Radio List -->
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-4 rounded-xl border border-solid border-border-light dark:border-border-dark p-[15px] flex-row-reverse bg-component-bg-light dark:bg-component-bg-dark has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/30">
+<input checked="" class="h-5 w-5 border-2 border-border-light dark:border-border-dark bg-transparent text-transparent checked:border-primary checked:bg-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="collaboration-mode" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Free for All</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">Les invités peuvent chacun ajouter des musiques à la file d'attente.</p>
+</div>
+</label>
+<label class="flex items-center gap-4 rounded-xl border border-solid border-border-light dark:border-border-dark p-[15px] flex-row-reverse bg-component-bg-light dark:bg-component-bg-dark has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/30">
+<input class="h-5 w-5 border-2 border-border-light dark:border-border-dark bg-transparent text-transparent checked:border-primary checked:bg-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="collaboration-mode" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Vote</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">Les invités proposent des chansons, et le groupe vote pour les ajouter à la liste de lecture.</p>
+</div>
+</label>
+<label class="flex items-center gap-4 rounded-xl border border-solid border-border-light dark:border-border-dark p-[15px] flex-row-reverse bg-component-bg-light dark:bg-component-bg-dark has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/30">
+<input class="h-5 w-5 border-2 border-border-light dark:border-border-dark bg-transparent text-transparent checked:border-primary checked:bg-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="collaboration-mode" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-text-light-primary dark:text-text-dark-primary text-sm font-medium leading-normal">Découverte</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">Chacun peut proposer à son tour deux chansons que les autres invités ne connaissent pas.</p>
+</div>
+</label>
+</div>
+</div>
+
+<!-- Invite Friends Button -->
+<div>
+<h3 class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Autres</h3>
+<button class="flex w-full items-center gap-4 bg-component-bg-light dark:bg-component-bg-dark px-4 min-h-14 justify-between rounded-xl border border-border-light dark:border-border-dark text-left">
+<div class="flex items-center gap-4">
+<div class="text-text-light-primary dark:text-text-dark-primary flex items-center justify-center shrink-0 size-10">
+<span class="material-symbols-outlined">person_add</span>
+</div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-normal leading-normal flex-1 truncate">Ajouter des Amis</p>
+</div>
+<div class="text-text-light-secondary dark:text-text-dark-secondary shrink-0">
+<span class="material-symbols-outlined">arrow_forward_ios</span>
+</div>
+</button>
+</div>
+<div class="flex-grow"></div>
+</div>
+</div>
+<!-- Sticky Footer CTA -->
+<div class="fixed bottom-0 left-0 right-0 p-4">
+<button class="w-full rounded-xl bg-primary px-6 py-4 text-center text-base font-bold text-white transition-all hover:bg-primary/90 disabled:cursor-not-allowed disabled:bg-primary/40 dark:disabled:bg-primary/50">Créer</button>
+</div>
+</div>
+</body></html>

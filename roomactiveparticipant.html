@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loop - Active Session</title>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center justify-start -ml-2">
+<a href="Acceuil.html" class="material-symbols-outlined text-3xl hover:opacity-70 transition">chevron_left</a>
+</div>
+<h2 class="text-zinc-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Soirée chez Alex</h2>
+<div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center justify-end -ml-2">
+<a href="" class="material-symbols-outlined text-3xl hover:opacity-70 transition">menu</a>
+</div>
+</div>
+<!-- Participant Avatars -->
+<div class="flex items-center px-4 py-3 justify-center">
+<div class="overflow-visible w-7">
+<div class="bg-center bg-no-repeat aspect-square bg-cover border-background-light dark:border-background-dark bg-zinc-700 text-zinc-400 rounded-full flex items-center justify-center size-9 border-[3px]" data-alt="User avatar 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtc7PwMSPw-T1YCXizcs_IbA0akGv9oMVVOkX3gzBGdp8KnY9G0vvOw1Pnxob61hlwzo3-glwwIfJEJDorxZ9kMZUJhWmjJb8h8AV5LiarZ24x0pKm6s4w08bgu_bFm4_9lT9zpVNroMJf9r_8pWRWKWepDMbAtE2e0Z8JQ_erTmLms1y8IgDKPFs9MBHHGfTdPSnTUuuAeetVm4YSRutkelqjq4jONIXRWnPJKk9HEDxpS5vkkRVq9I3RIBDKvs9xgeWkPlWoCus");'></div>
+</div>
+<div class="overflow-visible w-7">
+<div class="bg-center bg-no-repeat aspect-square bg-cover border-background-light dark:border-background-dark bg-zinc-700 text-zinc-400 rounded-full flex items-center justify-center size-9 border-[3px]" data-alt="User avatar 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhTX5dqNavy_RjBUtMKWtueWzOy6iL6yjCQvhWhe7_TDQIdp0IYebWaWH7JcI_GLeL92cUFlGSnAd9TEU5OOOWMhEPLa1BKt4eQ8o8SnETHDTMEZt2NLyEf4uihwsErGaycB5wgK8aIWsIayZCJ2HbtgU2sCY8Y4rKejSM0U_FucaryQpo4o4xTGxFhOUTNm3kMtcMpAZS-2Xb0jwdudpLmCTUxlCSSewf3UMHbRDsnwlZnZvqi9Wty5kisCwKkHiynT5vZciD_6k");'></div>
+</div>
+<div class="overflow-visible w-7">
+<div class="bg-center bg-no-repeat aspect-square bg-cover border-background-light dark:border-background-dark bg-zinc-700 text-zinc-400 rounded-full flex items-center justify-center size-9 border-[3px]" data-alt="User avatar 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsiCXHXOHpNv5liuppWzlzj71UZcUx0qHzOmVkm7por1TTcoWf6bV0Qm0Ifl11cOzNxj7ftKIF4UeunKWgSrjUIVhbN7s2YjZLeK-if39Zkg-_Hu7Djgze9qfPM5bMLZp0d8RgYTY4BU5nxpYGr8QMrr0R0lT1tBFXkzijT16MAAkzI-Yg1x_Y3DMi9Ssbs6p6mTchOLV6cQmqc0Jraaxzqzi7KlO55KXzz-Wcsrrn0wMxolMDrZKfnGqzZYT3eromcoFkqpyXmIY");'></div>
+</div>
+</div>
+<!-- Media Player -->
+<div class="flex flex-col items-stretch gap-6 px-4 pb-4 pt-3 text-zinc-900 dark:text-white">
+<div class="flex items-center justify-center py-7">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl size-64 shadow-2xl shadow-primary/20" data-alt="Album cover for the song One More Time" style='background-image: url("https://static.wikia.nocookie.net/daftpunk/images/5/50/One_More_Time.jpg");'></div>
+</div>
+<div class="text-center">
+<p class="text-zinc-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] truncate">One More Time</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-base font-normal leading-normal truncate">Daft Punk</p>
+</div>
+<div>
+  <!-- Barre de progression -->
+  <div class="flex h-4 items-center justify-center">
+    <!-- Partie remplie : 25% -->
+    <div class="h-1 rounded-full bg-primary w-1/4"></div>
+
+    <!-- Pastille -->
+    <div class="relative">
+      <div class="absolute -left-2 -top-2 size-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark"></div>
+    </div>
+
+    <!-- Partie vide -->
+    <div class="h-1 flex-1 rounded-full bg-zinc-300 dark:bg-zinc-700"></div>
+  </div>
+
+  <!-- Temps -->
+  <div class="flex items-center justify-between">
+    <p class="text-zinc-500 dark:text-zinc-400 text-xs font-medium leading-normal tracking-[0.015em]">0:32</p>
+    <p class="text-zinc-500 dark:text-zinc-400 text-xs font-medium leading-normal tracking-[0.015em]">3:20</p>
+  </div>
+</div>
+<!-- Playback controls are hidden for participants and only visible to the host -->
+<!-- 
+            <div class="flex items-center justify-center gap-6 pt-1">
+                <button class="flex shrink-0 items-center justify-center rounded-full size-10 text-zinc-900 dark:text-white"><span class="material-symbols-outlined" style="font-size: 32px;">skip_previous</span></button>
+                <button class="flex shrink-0 items-center justify-center rounded-full size-10 text-zinc-900 dark:text-white"><span class="material-symbols-outlined" style="font-size: 32px;">replay_10</span></button>
+                <button class="flex shrink-0 items-center justify-center rounded-full size-16 bg-primary text-white"><span class="material-symbols-outlined" style="font-size: 32px;">play_arrow</span></button>
+                <button class="flex shrink-0 items-center justify-center rounded-full size-10 text-zinc-900 dark:text-white"><span class="material-symbols-outlined" style="font-size: 32px;">forward_10</span></button>
+                <button class="flex shrink-0 items-center justify-center rounded-full size-10 text-zinc-900 dark:text-white"><span class="material-symbols-outlined" style="font-size: 32px;">skip_next</span></button>
+            </div>
+            -->
+</div>
+<!-- Section Header -->
+<h3 class="text-zinc-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Up Next</h3>
+<!-- Music Queue / Playlist -->
+<div class="flex flex-col gap-1 px-4 pb-28">
+<!-- List Item 1 -->
+<div class="space-y-2">
+
+  <!-- Item 1 -->
+  <div class="flex items-center gap-4 bg-transparent min-h-[72px] py-2 justify-between">
+    <div class="flex items-center gap-4">
+      <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14" style='background-image: url("https://www.topaccords.com/storage/illustrations/harry-styles%2Bas-it-was%2Bc9c3269e9d4fcfded454f81c6b268be140d5888ee46f658c1fa87cf71332048c.jpg");'></div>
+      <div class="flex flex-col justify-center">
+        <p class="text-zinc-900 dark:text-white text-base font-medium leading-normal line-clamp-1">As It Was</p>
+        <p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal line-clamp-2">Harry Styles - Ajouté par Alex</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="add-btn flex size-9 items-center justify-center text-zinc-500 dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 rounded-full transition-transform duration-150 hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:scale-105">
+        <span class="material-symbols-outlined" style="font-size: 20px;">add</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="flex items-center gap-4 bg-transparent min-h-[72px] py-2 justify-between">
+    <div class="flex items-center gap-4">
+      <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14" style='background-image: url("https://i.scdn.co/image/ab67616d0000b2734bc66095f8a70bc4e6593f4f");'></div>
+      <div class="flex flex-col justify-center">
+        <p class="text-zinc-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Levitating</p>
+        <p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal line-clamp-2">Dua Lipa - Ajouté par Chloé</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="add-btn flex size-9 items-center justify-center text-zinc-500 dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 rounded-full transition-transform duration-150 hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:scale-105">
+        <span class="material-symbols-outlined" style="font-size: 20px;">add</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="flex items-center gap-4 bg-transparent min-h-[72px] py-2 justify-between">
+    <div class="flex items-center gap-4">
+      <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14" style='background-image: url("https://images.genius.com/9d35a5dff10090e6c1d5e077932cea99.1000x1000x1.jpg");'></div>
+      <div class="flex flex-col justify-center">
+        <p class="text-zinc-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Save Your Tears</p>
+        <p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal line-clamp-2">The Weeknd - Ajouté par Vous</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="add-btn flex size-9 items-center justify-center text-zinc-500 dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 rounded-full transition-transform duration-150 hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:scale-105">
+        <span class="material-symbols-outlined" style="font-size: 20px;">add</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="flex items-center gap-4 bg-transparent min-h-[72px] py-2 justify-between">
+    <div class="flex items-center gap-4">
+      <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14" style='background-image: url("https://m.media-amazon.com/images/I/51nMgSxPQeL.jpg");'></div>
+      <div class="flex flex-col justify-center">
+        <p class="text-zinc-900 dark:text-white text-base font-medium leading-normal line-clamp-1">FE!N</p>
+        <p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal line-clamp-2">Travis Scott ft ... - Ajouté par François</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="add-btn flex size-9 items-center justify-center text-zinc-500 dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 rounded-full transition-transform duration-150 hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:scale-105">
+        <span class="material-symbols-outlined" style="font-size: 20px;">add</span>
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Floating Search Bar -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500 dark:text-zinc-400">
+                    search
+                </span>
+<input class="w-full rounded-full border-none bg-zinc-200 dark:bg-zinc-800 py-3 pl-12 pr-4 text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-400 focus:ring-2 focus:ring-primary" placeholder="Search and add a track" type="text"/>
+</div>
+</div>
+</div>
+</body></html>
