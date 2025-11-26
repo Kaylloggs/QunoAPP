@@ -57,7 +57,7 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { authService } from "./services/auth";
-import logo from "./assets/logo_basique.svg";
+import logo from "./assets/Logo_Basique.svg";
 import SearchModal from "./components/SearchModal";
 
 // --- Mock Data ---
