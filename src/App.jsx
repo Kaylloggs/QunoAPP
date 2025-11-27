@@ -40,6 +40,8 @@ import {
   ChevronDown,
   Power,
   Bell,
+  Sun,
+  Moon,
 } from "lucide-react";
 import {
   DndContext,
@@ -364,6 +366,22 @@ export default function QunoApp() {
   const [authMode, setAuthMode] = useState("login"); // 'login', 'register', 'guest'
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // Theme State
+  const [theme, setTheme] = useState("light");
+
+  // Apply Theme
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
 
   // Initialize Auth from LocalStorage
   useEffect(() => {
@@ -1333,6 +1351,21 @@ export default function QunoApp() {
               Application
             </h4>
             <Card className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="font-medium text-slate-700">
+                  Mode Sombre
+                </span>
+                <button
+                  onClick={toggleTheme}
+                  className={`w-12 h-7 rounded-full p-1 transition-colors duration-300 flex items-center ${theme === "dark" ? "bg-indigo-500 justify-end" : "bg-gray-200 justify-start"
+                    }`}
+                >
+                  <div className="w-5 h-5 bg-white rounded-full shadow-sm flex items-center justify-center text-slate-900">
+                    {theme === "dark" ? <Moon size={12} /> : <Sun size={12} />}
+                  </div>
+                </button>
+              </div>
+              <div className="w-full h-px bg-gray-100"></div>
               <div className="flex items-center justify-between">
                 <span className="font-medium text-slate-700">
                   Notifications
