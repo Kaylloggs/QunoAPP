@@ -19,7 +19,7 @@ const SubscriptionModal = ({ isOpen, onClose }) => {
                     </button>
                     <div className="text-center text-white">
                         <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mx-auto mb-3">
-                            <Store className="text-yellow-300 fill-yellow-300" size={24} />
+                            <Store className="text-yellow-300" size={24} />
                         </div>
                         <h2 className="text-2xl font-bold">Mode Kiosque</h2>
                         <p className="text-indigo-100 text-sm font-medium">Passez au niveau supérieur</p>
@@ -48,16 +48,6 @@ const SubscriptionModal = ({ isOpen, onClose }) => {
                                 <p className="text-sm text-slate-500">Outils de modération avancés et gestion des priorités.</p>
                             </div>
                         </div>
-
-                        <div className="flex items-start gap-4">
-                            <div className="p-2 bg-pink-50 text-pink-600 rounded-xl">
-                                <Star size={20} />
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-slate-900">Badge Pro</h3>
-                                <p className="text-sm text-slate-500">Un badge exclusif sur votre profil et vos rooms.</p>
-                            </div>
-                        </div>
                     </div>
 
                     {/* Pricing Card */}
@@ -74,7 +64,7 @@ const SubscriptionModal = ({ isOpen, onClose }) => {
                         onClick={() => alert("Redirection vers la page de paiement...")}
                         className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg shadow-indigo-200"
                     >
-                        Commencer l'essai gratuit
+                        Commencer dès maintenant
                     </Button>
                 </div>
             </div>
