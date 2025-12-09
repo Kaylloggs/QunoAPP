@@ -1584,7 +1584,7 @@ export default function QunoApp() {
               <p className="text-xs text-slate-500 mt-1 mb-3">
                 Doublez la capacité de vos rooms personnelles (14 participants) à vie.
               </p>
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 shadow-blue-200">
+              <Button className="w-full !bg-blue-600 !hover:bg-blue-700 !text-white shadow-blue-200">
                 Acheter (Unique)
               </Button>
             </div>
