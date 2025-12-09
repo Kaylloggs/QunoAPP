@@ -1603,29 +1603,29 @@ export default function QunoApp() {
             <div className="aspect-square bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl mb-2 flex items-center justify-center">
               <span className="text-2xl">🦄</span>
             </div>
-            <h3 className="font-bold text-sm text-slate-900">Avatar Animé</h3>
+            <h3 className="font-bold text-sm text-slate-900">Avatar Animé Licorne</h3>
+            <p className="text-xs text-slate-500">2,99 €</p>
+          </Card>
+          <Card className="p-3 relative group cursor-pointer hover:border-purple-200 transition-colors">
+            <div className="aspect-square bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl mb-2 flex items-center justify-center">
+              <span className="text-2xl">🥔</span>
+            </div>
+            <h3 className="font-bold text-sm text-slate-900">Avatar Animé Patate</h3>
             <p className="text-xs text-slate-500">2,99 €</p>
           </Card>
           <Card className="p-3 relative group cursor-pointer hover:border-purple-200 transition-colors">
             <div className="aspect-square bg-slate-900 rounded-xl mb-2 flex items-center justify-center">
               <div className="w-8 h-8 rounded-full border-2 border-white/30"></div>
             </div>
-            <h3 className="font-bold text-sm text-slate-900">Thème Dark</h3>
+            <h3 className="font-bold text-sm text-slate-900">Thème DarkHole</h3>
             <p className="text-xs text-slate-500">1,99 €</p>
           </Card>
           <Card className="p-3 relative group cursor-pointer hover:border-purple-200 transition-colors">
             <div className="aspect-square bg-gradient-to-tr from-orange-100 to-yellow-100 rounded-xl mb-2 flex items-center justify-center">
               <span className="text-2xl">🔥</span>
             </div>
-            <h3 className="font-bold text-sm text-slate-900">Effet Feu</h3>
+            <h3 className="font-bold text-sm text-slate-900">Thème Fire</h3>
             <p className="text-xs text-slate-500">0,99 €</p>
-          </Card>
-          <Card className="p-3 relative group cursor-pointer hover:border-purple-200 transition-colors">
-            <div className="aspect-square bg-blue-50 rounded-xl mb-2 flex items-center justify-center text-blue-500">
-              <Music size={24} />
-            </div>
-            <h3 className="font-bold text-sm text-slate-900">Pack Icônes</h3>
-            <p className="text-xs text-slate-500">3,99 €</p>
           </Card>
         </div>
       </section>
