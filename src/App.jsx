@@ -42,6 +42,11 @@ import {
   Bell,
   Sun,
   Moon,
+  Headphones,
+  ShoppingBag,
+  Palette,
+  Crown,
+  Star,
 } from "lucide-react";
 import {
   DndContext,
@@ -175,9 +180,17 @@ const MODES = [
     id: "kiosk",
     name: "Kiosque",
     icon: <Store size={20} />,
-    desc: "Mode Pro : 35 participants max.",
+    desc: "Participatif, mais cohérent. Idéal pour bars et restaurants.",
     locked: true,
-    price: "10$/mois",
+    price: "24,99€/mois",
+  },
+  {
+    id: "dj",
+    name: "Mode DJ",
+    icon: <Headphones size={20} />,
+    desc: "Les invités suggèrent, vous validez le mix.",
+    locked: true,
+    price: "24,99$/mois",
   },
 ];
 
@@ -415,6 +428,7 @@ export default function QunoApp() {
   const [showRoomDetailsModal, setShowRoomDetailsModal] = useState(false);
   const [showSearchModal, setShowSearchModal] = useState(false);
   const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
+  const [selectedLockedMode, setSelectedLockedMode] = useState(null);
   const [showRoomInvitations, setShowRoomInvitations] = useState(false);
 
   const sensors = useSensors(
@@ -916,34 +930,20 @@ export default function QunoApp() {
 
       <div className="space-y-3">
         <label className="text-sm font-medium text-slate-700 ml-1">
-          Source Audio (Hôte)
-        </label>
-        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-          {["Spotify", "Apple Music", "Deezer"].map((service) => (
-            <button
-              key={service}
-              className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium border transition-colors ${service === "Spotify"
-                ? "bg-indigo-50 border-indigo-200 text-indigo-700"
-                : "border-gray-200 text-slate-600"
-                }`}
-            >
-              {service}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="space-y-3">
-        <label className="text-sm font-medium text-slate-700 ml-1">
           Mode de jeu
         </label>
         <div className="grid gap-3">
           {MODES.map((mode) => (
             <div
               key={mode.id}
-              onClick={() =>
-                mode.locked ? setShowSubscriptionModal(true) : setCurrentMode(mode.id)
-              }
+              onClick={() => {
+                if (mode.locked) {
+                  setSelectedLockedMode(mode.id);
+                  setShowSubscriptionModal(true);
+                } else {
+                  setCurrentMode(mode.id);
+                }
+              }}
               className={`p-4 rounded-2xl border transition-all flex items-center gap-4 relative overflow-hidden ${mode.locked
                 ? "border-gray-100 bg-gray-50 opacity-75 cursor-not-allowed"
                 : currentMode === mode.id
@@ -985,6 +985,13 @@ export default function QunoApp() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="bg-blue-50 border border-blue-100 rounded-xl p-3 flex items-start gap-3">
+        <Users className="text-blue-500 shrink-0 mt-0.5" size={16} />
+        <p className="text-xs text-blue-700">
+          <span className="font-bold">Info :</span> 7 participants maximum sans la version Pro.
+        </p>
       </div>
 
       <div className="pt-4">
@@ -1479,6 +1486,152 @@ export default function QunoApp() {
 
   );
 
+  const renderShop = () => (
+    <div className="space-y-8 pb-8">
+      <header>
+        <h1 className="text-2xl font-bold text-slate-900">Boutique</h1>
+        <p className="text-slate-500">Passez au niveau supérieur</p>
+      </header>
+
+      {/* Section 1: Abonnements Pro */}
+      <section className="space-y-4">
+        <h2 className="font-bold text-slate-900 flex items-center gap-2">
+          <Star className="text-yellow-400 fill-yellow-400" size={20} />
+          Abonnements Pro
+        </h2>
+        <div className="grid gap-4">
+          <Card className="p-4 relative overflow-hidden border-indigo-100 bg-gradient-to-br from-white to-indigo-50/50">
+            <div className="absolute top-0 right-0 p-2 bg-indigo-500 text-white text-[10px] font-bold rounded-bl-xl">
+              POPULAIRE
+            </div>
+            <div className="flex justify-between items-start mb-2">
+              <div className="p-2 bg-indigo-100 text-indigo-600 rounded-xl">
+                <Store size={24} />
+              </div>
+              <div className="text-right">
+                <span className="block text-lg font-bold text-slate-900">40 €</span>
+                <span className="text-xs text-slate-500">/mois TTC</span>
+              </div>
+            </div>
+            <h3 className="font-bold text-slate-900">Bundle Pro</h3>
+            <p className="text-xs text-slate-500 mb-4">DJ + Kiosque (-20%)</p>
+            <Button
+              className="w-full text-xs py-2 h-auto"
+              onClick={() => {
+                setSelectedLockedMode('bundle');
+                setShowSubscriptionModal(true);
+              }}
+            >
+              Voir l'offre
+            </Button>
+          </Card>
+
+          <div className="grid grid-cols-2 gap-3">
+            <Card className="p-3 border-gray-100">
+              <div className="mb-2 p-1.5 bg-pink-50 text-pink-500 rounded-lg w-fit">
+                <Headphones size={20} />
+              </div>
+              <h3 className="font-bold text-sm text-slate-900">Mode DJ</h3>
+              <p className="text-xs text-slate-500 mb-2">25 € /mois</p>
+              <Button
+                variant="secondary"
+                className="w-full text-[10px] py-1.5 px-0 h-auto"
+                onClick={() => {
+                  setSelectedLockedMode('dj');
+                  setShowSubscriptionModal(true);
+                }}
+              >
+                S'abonner
+              </Button>
+            </Card>
+            <Card className="p-3 border-gray-100">
+              <div className="mb-2 p-1.5 bg-yellow-50 text-yellow-500 rounded-lg w-fit">
+                <Store size={20} />
+              </div>
+              <h3 className="font-bold text-sm text-slate-900">Kiosque</h3>
+              <p className="text-xs text-slate-500 mb-2">25 € /mois</p>
+              <Button
+                variant="secondary"
+                className="w-full text-[10px] py-1.5 px-0 h-auto"
+                onClick={() => {
+                  setSelectedLockedMode('kiosque');
+                  setShowSubscriptionModal(true);
+                }}
+              >
+                S'abonner
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2: Extension Capacité */}
+      <section className="space-y-4">
+        <h2 className="font-bold text-slate-900 flex items-center gap-2">
+          <Users className="text-blue-500" size={20} />
+          Extension Capacité
+        </h2>
+        <Card className="p-4 bg-blue-50 border-blue-100">
+          <div className="flex gap-4">
+            <div className="p-3 bg-white text-blue-500 rounded-2xl shadow-sm h-fit">
+              <Crown size={24} />
+            </div>
+            <div className="flex-1">
+              <div className="flex justify-between items-start">
+                <h3 className="font-bold text-slate-900">Quno Pro</h3>
+                <span className="font-bold text-blue-600">8,99 €</span>
+              </div>
+              <p className="text-xs text-slate-500 mt-1 mb-3">
+                Doublez la capacité de vos rooms personnelles (14 participants) à vie.
+              </p>
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 shadow-blue-200">
+                Acheter (Unique)
+              </Button>
+            </div>
+          </div>
+        </Card>
+      </section>
+
+      {/* Section 3: Micro-transactions */}
+      <section className="space-y-4">
+        <h2 className="font-bold text-slate-900 flex items-center gap-2">
+          <Palette className="text-purple-500" size={20} />
+          Boutique Cosmétique
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          <Card className="p-3 relative group cursor-pointer hover:border-purple-200 transition-colors">
+            <div className="aspect-square bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl mb-2 flex items-center justify-center">
+              <span className="text-2xl">🦄</span>
+            </div>
+            <h3 className="font-bold text-sm text-slate-900">Avatar Animé</h3>
+            <p className="text-xs text-slate-500">2,99 €</p>
+          </Card>
+          <Card className="p-3 relative group cursor-pointer hover:border-purple-200 transition-colors">
+            <div className="aspect-square bg-slate-900 rounded-xl mb-2 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full border-2 border-white/30"></div>
+            </div>
+            <h3 className="font-bold text-sm text-slate-900">Thème Dark</h3>
+            <p className="text-xs text-slate-500">1,99 €</p>
+          </Card>
+          <Card className="p-3 relative group cursor-pointer hover:border-purple-200 transition-colors">
+            <div className="aspect-square bg-gradient-to-tr from-orange-100 to-yellow-100 rounded-xl mb-2 flex items-center justify-center">
+              <span className="text-2xl">🔥</span>
+            </div>
+            <h3 className="font-bold text-sm text-slate-900">Effet Feu</h3>
+            <p className="text-xs text-slate-500">0,99 €</p>
+          </Card>
+          <Card className="p-3 relative group cursor-pointer hover:border-purple-200 transition-colors">
+            <div className="aspect-square bg-blue-50 rounded-xl mb-2 flex items-center justify-center text-blue-500">
+              <Music size={24} />
+            </div>
+            <h3 className="font-bold text-sm text-slate-900">Pack Icônes</h3>
+            <p className="text-xs text-slate-500">3,99 €</p>
+          </Card>
+        </div>
+      </section>
+    </div>
+  );
+
   // --- ROOM VIEWS ---
 
   const renderPlayer = ({ isHost }) => (
@@ -1956,6 +2109,7 @@ export default function QunoApp() {
                 {activeTab === "create" && renderCreateRoom()}
                 {activeTab === "friends" && renderFriends()}
                 {activeTab === "settings" && renderSettings()}
+                {activeTab === "shop" && renderShop()}
               </>
             )}
 
@@ -1973,6 +2127,7 @@ export default function QunoApp() {
             <SubscriptionModal
               isOpen={showSubscriptionModal}
               onClose={() => setShowSubscriptionModal(false)}
+              mode={selectedLockedMode}
             />
 
             {showIntegrationsModal && (
@@ -2178,6 +2333,7 @@ export default function QunoApp() {
                     { id: "home", icon: Wifi, label: "Accueil" },
                     { id: "create", icon: Plus, label: "Créer" },
                     { id: "friends", icon: Users, label: "Amis" },
+                    { id: "shop", icon: ShoppingBag, label: "Boutique" },
                     { id: "settings", icon: Settings, label: "Réglages" },
                   ].map((tab) => (
                     <button
